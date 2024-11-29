@@ -1,0 +1,38 @@
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/../MVC/css/template.css">
+    <link rel="stylesheet" href="/../MVC/css/search-student-form.css">
+</head>
+<body>
+<form action="/../MVC/Controller/studentController.php" method="post" name="search-field-value-form">
+    <input type="hidden" name="operation" value="search">
+    <table class="search-student-table">
+        <tr>
+            <th>Field</th>
+            <td><label>
+                <select name="field">
+                        <option name="id" value="id">id</option>
+                        <option name="name" value="name">name</option>
+                        <option name="age" value="age">age</option>
+                        <option name="university" value="university">university</option>
+                    </select>
+            </label></td>
+        </tr>
+        <tr>
+            <th>Value</th>
+            <td><label>
+                <input type="text" name="value">
+            </label></td>
+        </tr>
+    </table>
+    <input type="submit">
+</form>
+
+<a href="/../MVC/index.html" class="homepage-redirect">Trang chủ</a>
+</body>
+</html>

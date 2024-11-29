@@ -1,0 +1,57 @@
+.student-table, .student-table th, .student-table td  {
+    border: 1px solid transparent;
+    border-collapse: collapse;
+}
+
+.student-table th {
+    background: chocolate;
+    text-transform: uppercase;
+}
+
+.student-table td {
+    background: greenyellow;
+}
+
+.student-table th, .student-table td {
+    padding: 10px;
+}
+
+td.td-student-id {
+    text-align: center;
+    background: darkkhaki;
+    color: darkmagenta;
+    font-weight: bold;
+}
+
+td.td-student-name {
+    text-align: center;
+    text-transform: uppercase;
+    background: darkcyan;
+    font-weight: bold;
+}
+
+td.td-student-age {
+    text-align: center;
+    background: darkgray;
+}
+
+td.td-student-uni {
+    text-align: center;
+    background: lightcoral;
+}
+
+a.homepage-redirect {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    border: 1px solid;
+    background: darkorange;
+    padding: 15px;
+    margin: 25px;
+    text-decoration: none;
+}
+
+a.homepage-redirect:hover {
+    background: goldenrod;
+    font-size: xx-large;
+}

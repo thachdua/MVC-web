@@ -1,0 +1,34 @@
+<?php
+    $students ??= array();
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Students list</title>
+    <link rel="stylesheet" href="/../MVC/css/template.css">
+    <link rel="stylesheet" href="/../MVC/css/view-student.css">
+</head>
+<body>
+<table class="student-table">
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>age</th>
+        <th>university</th>
+    </tr>
+    <?php
+    foreach ($students as $student) {
+        ?>
+        <tr>
+            <td class="td-student-id"><?= $student->id ?></td>
+            <td class="td-student-name"><?= $student->name ?></td>
+            <td class="td-student-age"><?= $student->age ?></td>
+            <td class="td-student-uni"><?= $student->university ?></td>
+        </tr>
+    <?php }
+    ?>
+</table>
+<a href="/../MVC/index.html" class="homepage-redirect">Trang chủ</a>
+</body>
+</html>

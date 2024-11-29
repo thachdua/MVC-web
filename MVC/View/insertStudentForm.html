@@ -1,0 +1,63 @@
+<?php
+$nums = $_REQUEST['nums'] ?? 1;
+if (filter_var($nums, FILTER_VALIDATE_INT) === false or $nums <= 0) $nums = 1;
+?>
+
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Insert new student</title>
+    <link rel="stylesheet" href="/../MVC/css/insert-student-form.css">
+    <link rel="stylesheet" href="/../MVC/css/template.css">
+</head>
+<body>
+<form action="/../MVC/View/index.php">
+    <input type="hidden" name="controller" value="insert">
+    <label>Insert
+        <input type="text" size="3" maxlength="3" name="nums" value="<?= $nums ?>">
+        students
+    </label>
+    <input type="submit">
+</form>
+
+<form action="/../MVC/Controller/studentController.php?operation=insert" method="POST" name="student-info-form">
+    <table class="insert-student-table">
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>age</th>
+            <th>university</th>
+        </tr>
+        <?php
+        for ($it = 0; $it < $nums; $it++) {
+            ?>
+        <tr>
+            <td><label>
+                <input type="text" name="id[]" size="3">
+            </label></td>
+            <td><label>
+                <input type="text" name="name[]">
+            </label></td>
+            <td><label>
+                <input type="text" name="age[]" size="3">
+            </label></td>
+            <td><label>
+                <input type="text" name="university[]" size="10">
+            </label></td>
+        </tr>
+        <?php }
+        ?>
+    </table>
+    <table class="submit-reset-table">
+        <tr>
+            <td><input type="submit" value="submit"></td>
+            <td><input type="reset" value="reset"></td>
+        </tr>
+    </table>
+</form>
+<a href="/../MVC/index.html" class="homepage-redirect">Trang chủ</a>
+</body>
+</html>

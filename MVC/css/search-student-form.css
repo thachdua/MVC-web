@@ -1,0 +1,34 @@
+body, form[name="search-field-value-form"] {
+    background: mediumseagreen;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+* {
+    font-size: x-large;
+}
+
+table.search-student-table td {
+    padding: 20px;
+}
+
+select[name="field"] {
+    width: 100%;
+}
+
+
+input[type="submit"] {
+    background: indigo;
+    color: aqua;
+    padding: 20px;
+    font-size: large;
+    margin: 10px;
+    width: 150px;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+    background: cornflowerblue;
+    font-size: x-large;
+}

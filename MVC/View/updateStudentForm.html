@@ -1,0 +1,48 @@
+<?php
+    $students ??= array();
+?>
+
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Update students form</title>
+    <link rel="stylesheet" href="/../MVC/css/update-student-form.css">
+</head>
+<body>
+    <form action="/../MVC/Controller/studentController.php?operation=update&mode=submit" method="post" name ="update-student-form">
+        <table class="update-student-table">
+        <tr>
+            <th class="th-student-id">id</th>
+            <th class="th-student-name">name</th>
+            <th class="th-student-age">age</th>
+            <th class="th-student-uni">university</th>
+        </tr>
+        <?php foreach ($students as $student) { ?>
+            <tr>
+                <td class="td-student-id"><label>
+                    <input type="text" name="id[]" value="<?= $student->id ?>" readonly size="3">
+                </label></td>
+                <td class="td-student-name"><label>
+                    <input type="text" name="name[]" value="<?= $student->name ?>">
+                </label></td>
+                <td class="td-student-age"><label>
+                    <input type="text" name="age[]" value="<?= $student->age ?>" size="3">
+                </label></td>
+                <td class="td-student-uni"><label>
+                    <input type="text" name="university[]" value="<?= $student->university ?>" size="10">
+                </label></td>
+            </tr>
+        <?php }?>
+        </table>
+        <table class="submit-reset-table">
+            <tr>
+                <td><input type="submit"></td>
+                <td><input type="reset"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

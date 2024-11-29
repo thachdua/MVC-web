@@ -1,0 +1,47 @@
+<?php
+$students ??= array();
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update student</title>
+    <link rel="stylesheet" href="/../MVC/css/template.css">
+    <link rel="stylesheet" href="/../MVC/css/update-student.css">
+</head>
+<body>
+
+
+    <form action="/../MVC/Controller/studentController.php?operation=update&mode=checkbox" method="post">
+    <table class="student-table">
+        <tr>
+            <th>select</th>
+            <th>id</th>
+            <th>name</th>
+            <th>age</th>
+            <th>university</th>
+        </tr>
+        <?php
+        foreach ($students as $student) {
+            ?>
+            <tr>
+                <td class="td-student-checkbox"><label>
+                    <input type="checkbox" name="id[]" value="<?= $student->id ?>">
+                </label></td>
+                <td class="td-student-id"><?= $student->id ?></td>
+                <td class="td-student-name"><?= $student->name ?></td>
+                <td class="td-student-age"><?= $student->age ?></td>
+                <td class="td-student-uni"><?= $student->university ?></td>
+            </tr>
+        <?php }
+        ?>
+        <tr>
+            <td colspan="5"><input type="submit" value="Update"></td>
+        </tr>
+    </table>
+</form>
+
+
+<a href="/../MVC/index.html" class="homepage-redirect">Trang chủ</a>
+</body>
+</html>

@@ -1,0 +1,30 @@
+body, form[name="student-info-form"] {
+    background: mediumseagreen;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: x-large;
+}
+
+table.insert-student-table, table.insert-student-table th,table.insert-student-table td {
+    border: 1px solid;
+    border-collapse: collapse;
+    padding: 10px;
+    margin: 25px;
+}
+
+
+input[type="submit"], input[type="reset"] {
+    background: indigo;
+    color: aqua;
+    padding: 20px;
+    font-size: large;
+    margin: 10px;
+    width: 150px;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    cursor: pointer;
+    background: cornflowerblue;
+    font-size: x-large;
+}

@@ -1,0 +1,78 @@
+body, form[name="update-student-form"] {
+    background: mediumseagreen;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: x-large;
+}
+
+table.update-student-table, table.update-student-table th, table.update-student-table td {
+    border: 1px solid;
+    border-collapse: collapse;
+    padding: 10px;
+    margin: 25px;
+    font-size: x-large;
+}
+
+table.update-student-table th {
+    text-transform: uppercase
+}
+
+table.update-student-table td input {
+    text-align: center;
+}
+
+th.th-student-id {
+    background: darkorchid;
+}
+
+td.td-student-id {
+    background: darkmagenta;
+    text-align: center;
+}
+
+th.th-student-name {
+    background: rgba(174, 113, 36, 0.75);
+}
+
+td.td-student-name {
+    background: rgba(164, 103, 46, 0.75);
+    text-align: center;
+}
+
+th.th-student-age {
+    background: rgba(229, 44, 135, 0.61);
+}
+
+td.td-student-age {
+    background: rgba(209, 64, 105, 0.69);
+    text-align: center;
+}
+
+th.th-student-uni {
+    background: rgba(119, 47, 167, 0.74);
+}
+
+td.td-student-uni {
+    background: rgba(109, 67, 147, 0.54);
+    text-align: center;
+}
+
+table.submit-reset-table td{
+    text-align: center;
+}
+
+input[type="submit"], input[type="reset"] {
+    background: indigo;
+    color: aqua;
+    padding: 20px;
+    font-size: large;
+    margin: 10px;
+    width: 150px;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    cursor: pointer;
+    background: cornflowerblue;
+    font-size: x-large;
+}
